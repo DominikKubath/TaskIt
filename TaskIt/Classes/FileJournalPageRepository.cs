@@ -52,8 +52,27 @@ namespace TaskIt.Classes
                 Directory.CreateDirectory(journalDirectory);
             }
 
-            string pageFile = Path.Combine(journalDirectory, $"{Guid.NewGuid()}.json");
+            string pageFile = Path.Combine(journalDirectory, $"{page.Name}.json");
             File.WriteAllText(pageFile, JsonConvert.SerializeObject(page));
+        }
+
+        public void Update(string journalName, JournalPage page)
+        {
+            string journalDirectory = Path.Combine(_baseDirectory, journalName);
+            string pageFilePath = Path.Combine(journalDirectory, $"{page.Name}.json");
+
+            if (!Directory.Exists(journalDirectory))
+            {
+                throw new DirectoryNotFoundException($"Das Verzeichnis für das Journal {journalName} wurde nicht gefunden.");
+            }
+
+            if (!File.Exists(pageFilePath))
+            {
+                throw new FileNotFoundException($"Die Seite \"{page.Name}\" wurde nicht gefunden.");
+            }
+            string updatedPageJson = JsonConvert.SerializeObject(page);
+
+            File.WriteAllText(pageFilePath, updatedPageJson);
         }
 
         public void Delete(string journalName, string pageName)

@@ -15,3 +15,4 @@ D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\refint\TaskIt.dll
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.pdb
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.genruntimeconfig.cache
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\ref\TaskIt.dll
+D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.sourcelink.json

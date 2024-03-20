@@ -29,9 +29,18 @@ namespace TaskIt
             {
                 _pagePrinter.PrintInstructionPages();
 
+                var pages = _pageRepository.GetAllPages(_selectedJournal);
+                if(pages.Any())
+                {
+                    _pagePrinter.PrintAllJournalPages(_pageRepository.GetAllPages(_selectedJournal));
+                }
+                else
+                {
+                    Console.WriteLine("Noch keine Journal Seiten");
+                }
+                Console.Write("Gebe ein Kommando ein: ");
                 string command = Console.ReadLine();
                 Console.Clear();
-                _pagePrinter.PrintAllJournalPages(_pageRepository.GetAllPages(_selectedJournal));
                 // Extrahiere Befehl und optionalen Parameter
                 var splitCommand = command.Split(new[] { ' ' }, 2);
                 var action = splitCommand[0];
@@ -49,7 +58,6 @@ namespace TaskIt
                         break;
                     case "-Q":
                         Console.WriteLine("Schließe Seitenansicht...");
-                        // continueExecution = false;
                         break;
                     default:
                         Console.WriteLine("Kommando nicht bekannt.");
@@ -85,8 +93,35 @@ namespace TaskIt
 
         public void OpenPage(string pageName)
         {
-            // Hier implementierst du die Logik, um eine Seite zu öffnen
             Console.WriteLine("Öffne Seite: " + pageName);
+
+            var pages = _pageRepository.GetAllPages(_selectedJournal);
+            var page = pages.FirstOrDefault(p => p.Name.Equals(pageName, StringComparison.OrdinalIgnoreCase));
+
+            if (page == null)
+            {
+                Console.WriteLine($"Die Seite \"{pageName}\" wurde nicht gefunden.");
+                return;
+            }
+
+            Console.WriteLine($"Bearbeite Inhalt der Seite \"{pageName}\". \n\nAktueller Inhalt:");
+            Console.WriteLine(page.Content);
+            Console.WriteLine("\n\nNeuer Inhalt (oder leere Zeile zum Beenden):");
+            string newContent = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(newContent))
+            {
+                page.Content = newContent;
+                page.LastChanged = DateTime.Now;
+
+                _pageRepository.Update(_selectedJournal, page);
+
+                Console.WriteLine("Inhalt der Seite aktualisiert!");
+            }
+            else
+            {
+                Console.WriteLine("Bearbeiten abgebrochen.");
+            }
         }
     }
 }

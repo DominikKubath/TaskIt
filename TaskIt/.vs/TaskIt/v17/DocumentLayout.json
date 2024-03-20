@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filetodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\filetodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\journalui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:journalui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filejournalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\filejournalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filejournalpagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\filejournalpagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\journalpageui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:journalpageui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,25 +43,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FileTodoRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\FileTodoRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
+              "RelativeToolTip": "Classes\\FileTodoRepository.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T21:24:51.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JournalPageUI.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\JournalPageUI.cs",
+              "RelativeDocumentMoniker": "JournalPageUI.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\JournalPageUI.cs",
+              "RelativeToolTip": "JournalPageUI.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAowDsAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:55:17.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JournalUI.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\JournalUI.cs",
+              "RelativeDocumentMoniker": "JournalUI.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\JournalUI.cs",
+              "RelativeToolTip": "JournalUI.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAA2wDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:51:52.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileJournalRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileJournalRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\FileJournalRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileJournalRepository.cs",
+              "RelativeToolTip": "Classes\\FileJournalRepository.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:51:05.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FileJournalPageRepository.cs",
               "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileJournalPageRepository.cs",
               "RelativeDocumentMoniker": "Classes\\FileJournalPageRepository.cs",
               "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileJournalPageRepository.cs",
               "RelativeToolTip": "Classes\\FileJournalPageRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAvwDYAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T19:40:50.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T19:40:34.993Z",
               "EditorCaption": ""

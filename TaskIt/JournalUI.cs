@@ -35,9 +35,19 @@ namespace TaskIt
             {
                 _journalPrinter.PrintInstructionJournal();                
 
+                var journals = _journalRepository.GetAll();
+                if(journals.Any())
+                {
+                    _journalPrinter.PrintTableOfContents(journals);
+                }
+                else
+                {
+                    Console.WriteLine("Noch keine Journale.");
+                }
+                Console.Write("Gebe ein Kommando ein: ");
                 string command = Console.ReadLine();
                 Console.Clear();
-                _journalPrinter.PrintTableOfContents(_journalRepository.GetAll());
+
                 // Extrahiere Befehl und optionalen Parameter
                 var splitCommand = command.Split(new[] { ' ' }, 2);
                 var action = splitCommand[0];
@@ -106,9 +116,16 @@ namespace TaskIt
             }
 
             _selectedJournal = journalName;
-            var journalPageUI = new JournalPageUI(_pageRepository, _pagePrinter, _selectedJournal);
-            Console.WriteLine("Dein Journal ist: " + journalName);
-            journalPageUI.StartJournalPageUI();
+            if(!string.IsNullOrEmpty(_selectedJournal)) 
+            { 
+                var journalPageUI = new JournalPageUI(_pageRepository, _pagePrinter, _selectedJournal);
+                Console.WriteLine("Dein Journal ist: " + journalName);
+                journalPageUI.StartJournalPageUI();
+            }
+            else
+            {
+                Console.WriteLine("Error: Empty Journal Name");
+            }
         }
 
     }

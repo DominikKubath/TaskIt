@@ -11,6 +11,7 @@ namespace TaskIt.Interfaces
     {
         List<JournalPage> GetAllPages(string journalName);
         void Add(string journalName, JournalPage page);
+        void Update(string journalName, JournalPage page);
         void Delete(string journalName, string pageName);
 
     }

@@ -103,3 +103,4 @@ D:\Visual Studio Projects\ASE Project\TaskIt_Test\obj\Debug\net6.0\refint\TaskIt
 D:\Visual Studio Projects\ASE Project\TaskIt_Test\obj\Debug\net6.0\TaskIt_Test.pdb
 D:\Visual Studio Projects\ASE Project\TaskIt_Test\obj\Debug\net6.0\TaskIt_Test.genruntimeconfig.cache
 D:\Visual Studio Projects\ASE Project\TaskIt_Test\obj\Debug\net6.0\ref\TaskIt_Test.dll
+D:\Visual Studio Projects\ASE Project\TaskIt_Test\obj\Debug\net6.0\TaskIt_Test.sourcelink.json
