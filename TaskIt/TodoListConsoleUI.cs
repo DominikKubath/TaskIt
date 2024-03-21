@@ -31,19 +31,36 @@ namespace TaskIt
 
             while (continueExecution)
             {
-                
-                Console.WriteLine("Todo Liste öffnen: -T \nSchließen der Anwendung: -Q \nGebe ein Kommando ein: ");
+                _printer.PrintTodo(_repository.GetAll());
+                Console.WriteLine("Verfügbare Aktionen: -A (Hinzufügen), -U (Aktualisieren), -D (Löschen), -F (Filtern nach Priorität), -Q (Beenden)");
                 string command = Console.ReadLine();
                 Console.Clear();
-
                 switch (command.ToUpper())
                 {
-                    case "-T":
-                        Console.WriteLine("Öffne Todo Liste...");
-                        ProcessTodoCommands();
+                    case "-A":
+                        Console.WriteLine("Hinzufügen einer Aufgabe...");
+                        AddTodoItem();
+                        break;
+                    case "-U":
+                        Console.WriteLine("Aktualisieren einer Aufgabe...");
+                        UpdateTodoItem();
+                        break;
+                    case "-D":
+                        Console.WriteLine("Löschen einer Aufgabe...");
+                        DeleteTodoItem();
+                        break;
+                    case "-F":
+                        Console.Write("Aufgaben mit welcher Priorität sollen ausgegeben werden?: ");
+                        string input = Console.ReadLine();
+                        int prio;
+                        if (input != null)
+                            prio = int.Parse(input);
+                        else
+                            prio = 5;
+                        _printer.PrintTodo(_repository.GetByPriority(prio));
                         break;
                     case "-Q":
-                        Console.WriteLine("Schließe Anwendung...");
+                        Console.WriteLine("Schließe Todo-Liste...");
                         continueExecution = false;
                         break;
                     default:
@@ -61,10 +78,19 @@ namespace TaskIt
             Console.Write("Beschreibung der Aufgabe: ");
             string description = Console.ReadLine();
 
-            Console.Write("Priorität der Aufgabe: ");
-            int prio = int.Parse(Console.ReadLine());
+            Console.Write("Priorität der Aufgabe | 1 (Höchste), 2 (Hohe), 3 (Mittlere), 4 (Niedrige), 5 (Keine) | : ");
+            string priority = Console.ReadLine();
+            int prio;
+            try
+            {
+                prio = int.Parse(priority);
+            }
+            catch 
+            {
+                Console.WriteLine("Ungültige Eingabe: Priorität wurde Standartmäßig auf 5 (Keine Priorität) gesetzt");
+                prio = 5;
+            }
 
-            // Erstellen Sie einer Task und fügen es dem Repository hinzu.
             var newTodo = new TodoItem(name, description, prio);
             newTodo.IsCompleted = false;
             _repository.Add(newTodo);
@@ -139,43 +165,5 @@ namespace TaskIt
             }
         }
 
-        public void ProcessTodoCommands()
-        {
-            _printer.PrintTodo(_repository.GetAll());
-            Console.WriteLine("Verfügbare Aktionen: -A (Hinzufügen), -U (Aktualisieren), -D (Löschen), -F (Filtern nach Priorität), -Q (Beenden)");
-            string command = Console.ReadLine();
-            Console.Clear();
-            switch (command)
-            {
-                case "-A":
-                    Console.WriteLine("Hinzufügen einer Aufgabe...");
-                    AddTodoItem();
-                    break;
-                case "-U":
-                    Console.WriteLine("Aktualisieren einer Aufgabe...");
-                    UpdateTodoItem();
-                    break;
-                case "-D":
-                    Console.WriteLine("Löschen einer Aufgabe...");
-                    DeleteTodoItem();
-                    break;
-                case "-F":
-                    Console.Write("Aufgaben mit welcher Priorität sollen ausgegeben werden?: ");
-                    string input = Console.ReadLine();
-                    int prio;
-                    if (input != null)
-                        prio = int.Parse(input);
-                    else
-                        prio = 5;
-                    _printer.PrintTodo(_repository.GetByPriority(prio));
-                    break;
-                case "-Q":
-                    Console.WriteLine("Schließe Todo-Liste...");
-                    break;
-                default:
-                    Console.WriteLine("Kommando nicht bekannt.");
-                    break;
-            }
-        }
     }
 }

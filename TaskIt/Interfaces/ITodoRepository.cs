@@ -10,6 +10,7 @@ namespace TaskIt.Interfaces
     {
         IEnumerable<TodoItem> GetAll();
         TodoItem GetById(int id);
+        bool IsTodoContained(TodoItem todo);
         IEnumerable<TodoItem> GetByPriority(int priority);
         void Add(TodoItem todoItem);
         void Update(TodoItem todoItem);

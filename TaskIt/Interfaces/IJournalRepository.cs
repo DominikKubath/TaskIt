@@ -13,9 +13,9 @@ namespace TaskIt.Interfaces
 
         Journal GetByName(string name);
         Journal GetByLastChangedDate(DateTime date);
-        
+
+        void UpdateLastChangedDate(string journalName);
         void Add(Journal journal);
         void Delete(string name);
-        void Select(string name);
     }
 }

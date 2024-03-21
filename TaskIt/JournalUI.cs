@@ -17,14 +17,18 @@ namespace TaskIt
 
         private readonly IJournalPageRepository _pageRepository;
         private readonly IJournalPagePrinter _pagePrinter;
+
+        private readonly ITodoRepository _todoRepository;
+
         private string _selectedJournal;
 
-        internal JournalUI(IJournalRepository journalRepository, IJournalPrinter journalPrinter, IJournalPageRepository pageRepository, IJournalPagePrinter pagePrinter)
+        internal JournalUI(IJournalRepository journalRepository, IJournalPrinter journalPrinter, IJournalPageRepository pageRepository, IJournalPagePrinter pagePrinter, ITodoRepository todoRepository)
         {
             _journalRepository = journalRepository;
             _journalPrinter = journalPrinter;
             _pageRepository = pageRepository;
             _pagePrinter = pagePrinter;
+            _todoRepository = todoRepository;
         }
 
         public void StartJournalUI()
@@ -63,11 +67,6 @@ namespace TaskIt
                     case "-D":
                         DeleteJournal(name);
                         break;
-                    /*
-                    case "-O":
-                        OpenPage(name);
-                        break;
-                    */
                     case "-Q":
                         Console.WriteLine("Schließe Anwendung...");
                         continueExecution = false;
@@ -118,9 +117,10 @@ namespace TaskIt
             _selectedJournal = journalName;
             if(!string.IsNullOrEmpty(_selectedJournal)) 
             { 
-                var journalPageUI = new JournalPageUI(_pageRepository, _pagePrinter, _selectedJournal);
+                var journalPageUI = new JournalPageUI(_pageRepository, _pagePrinter, _todoRepository, _selectedJournal);
                 Console.WriteLine("Dein Journal ist: " + journalName);
                 journalPageUI.StartJournalPageUI();
+                _journalRepository.UpdateLastChangedDate(journalName);
             }
             else
             {

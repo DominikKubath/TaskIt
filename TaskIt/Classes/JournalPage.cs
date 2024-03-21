@@ -12,11 +12,14 @@ namespace TaskIt.Classes
         public string? Content { get; set; }
         public DateTime LastChanged { get; set; }
 
+        public List<TodoItem> TodoItems { get; set; }
+
         public JournalPage(string name, string? content, DateTime lastChanged) 
         {
             Name = name;
             Content = content;
             LastChanged = lastChanged;
+            TodoItems = new List<TodoItem>();
         }
     }
 }

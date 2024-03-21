@@ -22,7 +22,7 @@ static void StartApp()
     IJournalRepository journalRepository = new FileJournalRepository("journal.json");
     IJournalPrinter journalPrinter = new ConsoleJournalPrinter();
 
-    IJournalPageRepository journalPageRepository = new FileJournalPageRepository("Journals/");
+    IJournalPageRepository journalPageRepository = new FileJournalPageRepository(todoRepository, "Journals/");
     IJournalPagePrinter journalPagePrinter = new ConsoleJournalPagePrinter();
 
     while (true)
@@ -35,7 +35,7 @@ static void StartApp()
         {
             case "-J":
                 Console.WriteLine("Öffne Journale...\n");
-                var journalsUI = new JournalUI(journalRepository, journalPrinter, journalPageRepository, journalPagePrinter);
+                var journalsUI = new JournalUI(journalRepository, journalPrinter, journalPageRepository, journalPagePrinter, todoRepository);
                 journalsUI.StartJournalUI();
                 //ProcessJournalCommands(journalRepository, journalPrinter);
                 break;

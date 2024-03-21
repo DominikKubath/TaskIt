@@ -13,8 +13,11 @@ namespace TaskIt.Classes
         private readonly string _baseDirectory = "Journals/";
         private readonly IJournalPageRepository _journalPageRepository;
 
-        public FileJournalPageRepository(string filepath)
+        private readonly ITodoRepository _todoRepository;
+
+        public FileJournalPageRepository(ITodoRepository todoRepository, string filepath)
         {
+            _todoRepository = todoRepository;
             _baseDirectory = filepath;
         }
 
@@ -41,7 +44,7 @@ namespace TaskIt.Classes
                 }
             }
 
-            return pages; // Ensure this method returns a List<JournalPage> to match the interface
+            return pages;
         }
 
         public void Add(string journalName, JournalPage page)
@@ -69,6 +72,16 @@ namespace TaskIt.Classes
             if (!File.Exists(pageFilePath))
             {
                 throw new FileNotFoundException($"Die Seite \"{page.Name}\" wurde nicht gefunden.");
+            }
+            JournalPageParser parser = new JournalPageParser();
+            if(page.Content != null)
+            {
+                page.TodoItems = parser.ParseTodos(page.Content);
+                foreach (TodoItem item in page.TodoItems)
+                {
+                    if(!_todoRepository.IsTodoContained(item))
+                        _todoRepository.Add(item);
+                }
             }
             string updatedPageJson = JsonConvert.SerializeObject(page);
 

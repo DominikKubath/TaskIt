@@ -27,6 +27,18 @@ namespace TaskIt.Classes
 
         public TodoItem GetById(int id) => _tasks.FirstOrDefault(t => t.ID == id);
 
+        public bool IsTodoContained(TodoItem todo)
+        {
+            foreach (TodoItem item in _tasks)
+            {
+                if (item.Name == todo.Name && item.Description == todo.Description)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public IEnumerable<TodoItem> GetByPriority(int priority)
         {
             Priority priorityEnum = (Priority)priority;

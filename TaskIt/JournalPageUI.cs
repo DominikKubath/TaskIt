@@ -12,12 +12,16 @@ namespace TaskIt
     {
         private readonly IJournalPageRepository _pageRepository;
         private readonly IJournalPagePrinter _pagePrinter;
+
+        private readonly ITodoRepository _todoRepository;
+
         private readonly string _selectedJournal;
 
-        internal JournalPageUI(IJournalPageRepository pageRepository, IJournalPagePrinter pagePrinter, string selectedJournal)
+        internal JournalPageUI(IJournalPageRepository pageRepository, IJournalPagePrinter pagePrinter, ITodoRepository todoRepository, string selectedJournal)
         {
             _pageRepository = pageRepository;
             _pagePrinter = pagePrinter;
+            _todoRepository = todoRepository;
             _selectedJournal = selectedJournal;
         }
 
@@ -58,6 +62,7 @@ namespace TaskIt
                         break;
                     case "-Q":
                         Console.WriteLine("Schließe Seitenansicht...");
+                        continueExecution = false;
                         break;
                     default:
                         Console.WriteLine("Kommando nicht bekannt.");

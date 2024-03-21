@@ -8,13 +8,11 @@ namespace TaskIt_Test
     public class FileTodoRepository_Test
     {
         ITodoRepository todoRepository;
-        ITodoPrinter todoPrinter;
 
         [OneTimeSetUp]
         public void BeforeAll()
         {
             todoRepository = new FileTodoRepository("test_todos.json");
-            todoPrinter = new ConsoleTodoPrinter();
         }
 
         [OneTimeTearDown]

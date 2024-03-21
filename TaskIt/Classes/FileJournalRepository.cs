@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using TaskIt.Interfaces;
 
 namespace TaskIt.Classes
@@ -40,6 +41,10 @@ namespace TaskIt.Classes
             return journal;
         }
 
+        public void UpdateLastChangedDate(string journalName)
+        {
+            GetByName(journalName).LastChanged = DateTime.Now;
+        }
 
         public void Add(Journal journal)
         {
@@ -58,13 +63,6 @@ namespace TaskIt.Classes
 
             _journals.Remove(journal);
             SaveJournals();
-        }
-
-
-        public void Select(string name)
-        {
-            // Handling for choosing -> editing a single journal instance | yet to do 
-            throw new NotImplementedException();
         }
 
         private void SaveJournals()
