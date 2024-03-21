@@ -1009,23 +1009,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dominik\\.nuget\\packages\\": {},
+    "C:\\Users\\darks\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj",
+      "projectUniqueName": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
       "projectName": "TaskIt_Test",
-      "projectPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj",
-      "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\obj\\",
+      "projectPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
+      "packagesPath": "C:\\Users\\darks\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\darks\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1040,8 +1040,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj": {
-              "projectPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj"
+            "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj": {
+              "projectPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj"
             }
           }
         }

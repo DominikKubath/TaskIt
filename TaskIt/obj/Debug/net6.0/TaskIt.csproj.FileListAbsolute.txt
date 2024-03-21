@@ -16,3 +16,21 @@ D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.pdb
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.genruntimeconfig.cache
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\ref\TaskIt.dll
 D:\Visual Studio Projects\ASE Project\TaskIt\obj\Debug\net6.0\TaskIt.sourcelink.json
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\TaskIt.exe
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\TaskIt.deps.json
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\TaskIt.runtimeconfig.json
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\TaskIt.dll
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\TaskIt.pdb
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.csproj.AssemblyReference.cache
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.AssemblyInfoInputs.cache
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.AssemblyInfo.cs
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.csproj.CoreCompileInputs.cache
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.sourcelink.json
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.csproj.Up2Date
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.dll
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\refint\TaskIt.dll
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.pdb
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\TaskIt.genruntimeconfig.cache
+C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt\obj\Debug\net6.0\ref\TaskIt.dll

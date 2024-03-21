@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TaskIt_Test
-build_property.ProjectDir = D:\Visual Studio Projects\ASE Project\TaskIt_Test\
+build_property.ProjectDir = C:\Users\darks\Source\Repos\DominikKubath\TaskIt\TaskIt_Test\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

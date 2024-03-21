@@ -71,7 +71,7 @@ namespace TaskIt_Test
             TodoItem newTodo = new TodoItem("Test", "Description");
             todoRepository.Add(newTodo);
 
-            var todo = todoRepository.GetById(0);
+            var todo = todoRepository.GetById(1);
 
             Assert.NotNull(todo);
             Assert.That(todo.Name, Is.EqualTo("Test"));
