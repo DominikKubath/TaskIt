@@ -34,6 +34,7 @@ namespace TaskIt_Test
             List<TodoItem> foundItems = parser.ParseTodos(testContent);
 
             Assert.That(foundItems.Count, Is.EqualTo(1));
+            Assert.That(foundItems.First().Name, Is.EqualTo("Task1"));
         }
     }
 }

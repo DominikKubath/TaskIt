@@ -9,17 +9,19 @@ namespace TaskIt_Test
     {
         ITodoRepository todoRepository;
 
-        [OneTimeSetUp]
-        public void BeforeAll()
+        [SetUp]
+        public void BeforeEach()
         {
+            File.Delete("test_todos.json");
             todoRepository = new FileTodoRepository("test_todos.json");
         }
 
-        [OneTimeTearDown]
-        public void AfterAll()
+        [TearDown]
+        public void AfterEach()
         {
             File.Delete("test_todos.json");
         }
+
 
         [Test]
         public void AddNewTodo_TodoIsAdded()
@@ -63,5 +65,41 @@ namespace TaskIt_Test
             Assert.That(todos.First().Description, Is.EqualTo("New Desc"));
         }
 
+        [Test]
+        public void GetTodoById_CorrectTodoIsRetrieved()
+        {
+            TodoItem newTodo = new TodoItem("Test", "Description");
+            todoRepository.Add(newTodo);
+
+            var todo = todoRepository.GetById(0);
+
+            Assert.NotNull(todo);
+            Assert.That(todo.Name, Is.EqualTo("Test"));
+        }
+
+        [Test]
+        public void GetTodosByPrio_CorrectTodosRetrieved()
+        {
+            TodoItem newTodo = new TodoItem("Test", "Description", 1);
+            todoRepository.Add(newTodo);
+
+            var todo = todoRepository.GetByPriority(1);
+
+            Assert.NotNull(todo);
+            Assert.That(todo.First().Name, Is.EqualTo("Test"));
+        }
+
+        [Test]
+        public void GetTodosByPrio_InvalidPrioGiven_TodoHasDefaultPriority()
+        {
+            TodoItem newTodo = new TodoItem("Test", "Description", -50);
+            todoRepository.Add(newTodo);
+
+            var todo = todoRepository.GetAll();
+
+            Assert.NotNull(todo);
+            Assert.That(todo.First().Name, Is.EqualTo("Test"));
+            Assert.That(Convert.ToInt32(todo.First().Prio), Is.EqualTo(5));
+        }
     }
 }

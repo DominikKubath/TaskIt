@@ -49,6 +49,11 @@ namespace TaskIt.Classes
         public void Add(TodoItem todoItem)
         {
             todoItem.ID = _tasks.Count + 1;
+            int todoPrio = Convert.ToInt32(todoItem.Prio);
+            if (todoPrio < 0 || todoPrio > 5)
+            {
+                todoItem.Prio = Priority.None;
+            }
             _tasks.Add(todoItem);
             SaveTodos();
         }

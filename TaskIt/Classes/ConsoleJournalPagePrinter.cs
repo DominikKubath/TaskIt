@@ -27,6 +27,11 @@ namespace TaskIt.Classes
 
             Console.WriteLine("Spefizikation von Todos auf einer Seite: @[Anweisung]@");
             Console.WriteLine("Beispiel: @Wäsche waschen@ \n");
+            Console.WriteLine("Die Aufgaben müssen von mindestens einem leerzeichen umgeben werden.\n");
+            Console.WriteLine("Somit würden gültige eingaben folgendermaßen aussehen:");
+            Console.WriteLine("... Lorem Ipsum @Aufgabe@ dolor sit amet @Aufgabe2@ @Aufgabe3@ sed eiusmod ...\n\n");
+            Console.WriteLine("Dagegen würden ungültige eingaben folgendermaßen aussehen:");
+            Console.WriteLine("... Lorem Ipsum@Aufgabe@dolor sit amet@Aufgabe2@eiusmod ...\n\n");
         }
     }
 }

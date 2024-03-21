@@ -78,8 +78,6 @@ namespace TaskIt
             }
         }
 
-  
-
         public void CreateJournal(string journalName)
         {
             if (string.IsNullOrEmpty(journalName))
@@ -120,7 +118,7 @@ namespace TaskIt
                 var journalPageUI = new JournalPageUI(_pageRepository, _pagePrinter, _todoRepository, _selectedJournal);
                 Console.WriteLine("Dein Journal ist: " + journalName);
                 journalPageUI.StartJournalPageUI();
-                _journalRepository.UpdateLastChangedDate(journalName);
+                _journalRepository.UpdateLastChangedDate(_selectedJournal);
             }
             else
             {
