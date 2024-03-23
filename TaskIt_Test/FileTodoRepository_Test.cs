@@ -71,7 +71,7 @@ namespace TaskIt_Test
             TodoItem newTodo = new TodoItem("Test", "Description");
             todoRepository.Add(newTodo);
 
-            var todo = todoRepository.GetById(0);
+            var todo = todoRepository.GetById(1);
 
             Assert.NotNull(todo);
             Assert.That(todo.Name, Is.EqualTo("Test"));
@@ -100,6 +100,26 @@ namespace TaskIt_Test
             Assert.NotNull(todo);
             Assert.That(todo.First().Name, Is.EqualTo("Test"));
             Assert.That(Convert.ToInt32(todo.First().Prio), Is.EqualTo(5));
+        }
+
+        [Test]
+        public void GetTodosCloseToDeadline_RelevantTodosRetrieved()
+        {
+            TodoItem newTodo1 = new TodoItem("Test1", "Description 1");
+            TodoItem newTodo2 = new TodoItem("Test2", "Description 2");
+            TodoItem newTodo3 = new TodoItem("Test3", "Description 3");
+            DateTime nearDeadline = DateTime.Now + TimeSpan.FromDays(1);
+            newTodo1.Deadline = nearDeadline;
+            newTodo2.Deadline = nearDeadline;
+            newTodo3.Deadline = nearDeadline;
+            todoRepository.Add(newTodo1);
+            todoRepository.Add(newTodo2);
+            todoRepository.Add(newTodo3);
+
+            var todos = todoRepository.GetTodosCloseToDeadline();
+
+            Assert.NotNull(todos);
+            Assert.That(todos.Count, Is.EqualTo(3));
         }
     }
 }
