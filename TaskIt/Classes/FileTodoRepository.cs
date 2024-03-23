@@ -27,6 +27,25 @@ namespace TaskIt.Classes
 
         public TodoItem GetById(int id) => _tasks.FirstOrDefault(t => t.ID == id);
 
+        public IEnumerable<TodoItem> GetTodosCloseToDeadline()
+        {
+            var todosCloseToDeadline = new List<TodoItem>();
+
+            foreach (var todo in _tasks)
+            {
+                if (todo.Deadline.HasValue)
+                {
+                    TimeSpan timeUntilDeadline = todo.Deadline.Value - DateTime.Today;
+                    if (timeUntilDeadline.Days <= 2 && timeUntilDeadline.Days >= 0)
+                    {
+                        todosCloseToDeadline.Add(todo);
+                    }
+                }
+            }
+
+            return todosCloseToDeadline;
+        }
+
         public bool IsTodoContained(TodoItem todo)
         {
             foreach (TodoItem item in _tasks)
@@ -67,6 +86,7 @@ namespace TaskIt.Classes
                 existingTodo.Description = todoItem.Description;
                 existingTodo.Prio = todoItem.Prio;
                 existingTodo.IsCompleted = todoItem.IsCompleted;
+                existingTodo.Deadline = todoItem.Deadline;
                 SaveTodos();
             }
         }

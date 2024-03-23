@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TaskIt.Interfaces;
 using TaskIt.Classes;
+using System.Globalization;
 
 namespace TaskIt
 {
@@ -32,7 +33,13 @@ namespace TaskIt
             while (continueExecution)
             {
                 _printer.PrintTodo(_repository.GetAll());
-                Console.WriteLine("Verfügbare Aktionen: -A (Hinzufügen), -U (Aktualisieren), -D (Löschen), -F (Filtern nach Priorität), -Q (Beenden)");
+                var closeToDeadline = _repository.GetTodosCloseToDeadline();
+                if(closeToDeadline.Any())
+                {
+                    Console.WriteLine("\n\n\nFolgende Todo's sind nah an der Deadline: ");
+                    _printer.PrintTodo(closeToDeadline);
+                }
+                Console.WriteLine("\n\nVerfügbare Aktionen: -A (Hinzufügen), -U (Aktualisieren), -D (Löschen), -F (Filtern nach Priorität), -Q (Beenden)");
                 string command = Console.ReadLine();
                 Console.Clear();
                 switch (command.ToUpper())
@@ -93,6 +100,25 @@ namespace TaskIt
 
             var newTodo = new TodoItem(name, description, prio);
             newTodo.IsCompleted = false;
+            Console.Write("Besitzt die Aufgabe eine Deadline? (J/N): ");
+            string hasDeadline = Console.ReadLine();
+            if (hasDeadline.Trim().ToUpper() == "J")
+            {
+                Console.WriteLine("Gebe eine Deadline im folgenden Format an: dd.MM.yyyy (z.B., 01.06.2024)");
+                Console.Write("Deadline ist am: ");
+                string deadlineInput = Console.ReadLine();
+
+                DateTime deadline;
+                if (DateTime.TryParseExact(deadlineInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out deadline))
+                {
+                    newTodo.Deadline = deadline;
+                }
+                else
+                {
+                    Console.WriteLine("Ungültiges Datumformat für die Deadline. Die Deadline wurde nicht gesetzt.");
+                }
+            }
+
             _repository.Add(newTodo);
 
             Console.WriteLine("Aufgabe hinzugefügt!");
@@ -129,6 +155,25 @@ namespace TaskIt
                         Console.WriteLine("Mögliche Prioritäten: \n Höchste => 1\n Hoch => 2\n Mittel => 3\n Niedrig => 4\n Keine => 5\n");
                         Console.Write("Neue Priorität: ");
                         existingTodo.Prio = (TodoItem.Priority)int.Parse(Console.ReadLine());
+                    }
+
+                    Console.Write("Neue Deadline? (J/N): ");
+                    string hasDeadline = Console.ReadLine();
+                    if (hasDeadline.Trim().ToUpper() == "J")
+                    {
+                        Console.WriteLine("Gebe eine Deadline im folgenden Format an: dd.MM.yyyy (z.B., 01.06.2024)");
+                        Console.Write("Deadline ist am: ");
+                        string deadlineInput = Console.ReadLine();
+
+                        DateTime deadline;
+                        if (DateTime.TryParseExact(deadlineInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out deadline))
+                        {
+                            existingTodo.Deadline = deadline;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ungültiges Datumformat für die Deadline. Die Deadline wurde nicht gesetzt.");
+                        }
                     }
 
                     Console.Write("Ist die Aufgabe abgeschlossen? (J/N): ");

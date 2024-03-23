@@ -9,7 +9,7 @@ using TaskIt.Interfaces;
 
 namespace TaskIt.Classes
 {
-    internal class FileJournalRepository : IJournalRepository
+    public class FileJournalRepository : IJournalRepository
     {
         private readonly string _filePath;
         private List<Journal> _journals;

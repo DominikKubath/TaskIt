@@ -21,7 +21,8 @@ namespace TaskIt.Classes
         public string Name { get; set; }
         public string Description { get; set; }
         public bool IsCompleted { get; set; }
-        public Priority Prio { get; set; }
+        public Priority Prio { get; set; }      
+        public DateTime? Deadline { get; set; }
         public TodoItem(string name, string description, int priority = 5) 
         {
             Name = name; 

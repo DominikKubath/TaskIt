@@ -13,7 +13,12 @@ namespace TaskIt.Classes
         {
             foreach (var item in items)
             {
-                Console.WriteLine($"ID: [{item.ID}] | Name: {item.Name} | Description: {item.Description} | Priority: {item.Prio} -- {(item.IsCompleted ? "Completed" : "Not Completed")}");
+                string deadline;
+                if (item.Deadline == null)
+                    deadline = "Keine Deadline";
+                else
+                    deadline = item.Deadline.ToString().Substring(0,10);
+                Console.WriteLine($"ID: [{item.ID}] | Name: {item.Name} | Description: {item.Description} | Priority: {item.Prio} | Deadline: {deadline} -- {(item.IsCompleted ? "Completed" : "Not Completed")}");
             }
         }
 

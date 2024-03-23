@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace TaskIt.Classes
 {
-    internal class FileJournalPageRepository : IJournalPageRepository
+    public class FileJournalPageRepository : IJournalPageRepository
     {
         private readonly string _baseDirectory = "Journals/";
         private readonly IJournalPageRepository _journalPageRepository;

@@ -37,7 +37,6 @@ static void StartApp()
                 Console.WriteLine("Öffne Journale...\n");
                 var journalsUI = new JournalUI(journalRepository, journalPrinter, journalPageRepository, journalPagePrinter, todoRepository);
                 journalsUI.StartJournalUI();
-                //ProcessJournalCommands(journalRepository, journalPrinter);
                 break;
             case "-T":
                 Console.WriteLine("Öffne Todo Liste...");
