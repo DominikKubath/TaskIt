@@ -1015,9 +1015,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
+      "projectUniqueName": "C:\\Users\\darks\\source\\repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
       "projectName": "TaskIt_Test",
-      "projectPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
+      "projectPath": "C:\\Users\\darks\\source\\repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
       "packagesPath": "C:\\Users\\darks\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\obj\\",
       "projectStyle": "PackageReference",
@@ -1040,8 +1040,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj": {
-              "projectPath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj"
+            "C:\\Users\\darks\\source\\repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj": {
+              "projectPath": "C:\\Users\\darks\\source\\repos\\DominikKubath\\TaskIt\\TaskIt\\TaskIt.csproj"
             }
           }
         }

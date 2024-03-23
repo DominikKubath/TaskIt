@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Md2VNEmkMGiO+qzvpN+S4OFXBONuYZmPIw8VIcIJfXOLLcWzRgdZRciZnxYMun0qs4FcHy4sY7Y5dtbFKPJnpg==",
+  "dgSpecHash": "xvQ55nBCBzYBaECYjLGMFIlInLJfCKcROVuuD7orLq4vntrDHwkB10d6qZXppcMbfBZiDwW/fFitJIFIMMgdtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\darks\\Source\\Repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
+  "projectFilePath": "C:\\Users\\darks\\source\\repos\\DominikKubath\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\darks\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\darks\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
