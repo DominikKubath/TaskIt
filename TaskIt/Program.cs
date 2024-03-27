@@ -25,6 +25,12 @@ static void StartApp()
     IJournalPageRepository journalPageRepository = new FileJournalPageRepository(todoRepository, "Journals/");
     IJournalPagePrinter journalPagePrinter = new ConsoleJournalPagePrinter();
 
+    ITransactionRepository transactionRepository = new FileTransactionRepository("transactions.json");
+    ITransactionPrinter transactionPrinter = new ConsoleTransactionPrinter();
+
+    IBudgetRepository budgetRepository = new FileBudgetRepository("budgets.json");
+    IBudgetPrinter budgetPrinter = new ConsoleBudgetPrinter();
+
     while (true)
     {
         Console.WriteLine("Journale öffnen: -J \nTodo Liste öffnen: -T \nFinanzbuch öffnen: -F \nSchließen der Anwendung: -Q \nGebe ein Kommando ein: ");
@@ -45,7 +51,8 @@ static void StartApp()
                 break;
             case "-F":
                 Console.WriteLine("Öffne Finanzbuch...");
-                // Implementiere die Logik für das Finanzbuch
+                var financeUI = new FinanceUI(transactionRepository, transactionPrinter, budgetRepository, budgetPrinter);
+                financeUI.StartFinanceUI();
                 break;
             case "-Q":
                 Console.WriteLine("Schließe Anwendung...");

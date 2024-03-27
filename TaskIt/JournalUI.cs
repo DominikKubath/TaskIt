@@ -52,7 +52,6 @@ namespace TaskIt
                 string command = Console.ReadLine();
                 Console.Clear();
 
-                // Extrahiere Befehl und optionalen Parameter
                 var splitCommand = command.Split(new[] { ' ' }, 2);
                 var action = splitCommand[0];
                 var name = splitCommand.Length > 1 ? splitCommand[1] : string.Empty;

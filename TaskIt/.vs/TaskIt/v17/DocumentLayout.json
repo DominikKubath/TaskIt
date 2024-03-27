@@ -3,7 +3,24 @@
   "WorkspaceRootPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{759833B6-EB30-434F-BDC3-DF3F6FC277BB}|..\\TaskIt_Test\\TaskIt_Test.csproj|d:\\visual studio projects\\ase project\\taskit_test\\filetodorepository_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\financeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:financeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\consoletransactionprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\consoletransactionprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filetransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\filetransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Studio Projects\\ASE Project\\TaskIt\\bin\\Debug\\net6.0\\transactions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\transactions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filetodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -14,16 +31,16 @@
       "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:todolistconsoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\interfaces\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:interfaces\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\filebudgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\filebudgetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\consoletodoprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\consoletodoprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\consolebudgetprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\consolebudgetprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\classes\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:classes\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|d:\\visual studio projects\\ase project\\taskit\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F775B2-ABB0-4DE7-88C5-2B8A048CF072}|TaskIt.csproj|solutionrelative:interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,73 +50,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TodoListConsoleUI.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TodoListConsoleUI.cs",
-              "RelativeDocumentMoniker": "TodoListConsoleUI.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TodoListConsoleUI.cs",
-              "RelativeToolTip": "TodoListConsoleUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T10:01:15.843Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileTodoRepository.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\FileTodoRepository.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
-              "RelativeToolTip": "Classes\\FileTodoRepository.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAjwCMAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T14:41:01.362Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITodoRepository.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Interfaces\\ITodoRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ITodoRepository.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Interfaces\\ITodoRepository.cs",
-              "RelativeToolTip": "Interfaces\\ITodoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T09:56:52.791Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileTodoRepository_Test.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\FileTodoRepository_Test.cs",
-              "RelativeDocumentMoniker": "..\\TaskIt_Test\\FileTodoRepository_Test.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\FileTodoRepository_Test.cs",
-              "RelativeToolTip": "..\\TaskIt_Test\\FileTodoRepository_Test.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAAwHQAAAApAAAA",
+              "Title": "FinanceUI.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\FinanceUI.cs",
+              "RelativeDocumentMoniker": "FinanceUI.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\FinanceUI.cs",
+              "RelativeToolTip": "FinanceUI.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAADwv/cAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T13:39:39.691Z",
+              "WhenOpened": "2024-03-25T13:27:47.981Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TodoItem.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\TodoItem.cs",
-              "RelativeDocumentMoniker": "Classes\\TodoItem.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\TodoItem.cs",
-              "RelativeToolTip": "Classes\\TodoItem.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAABJAAAA",
+              "DocumentIndex": 6,
+              "Title": "TodoListConsoleUI.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TodoListConsoleUI.cs",
+              "RelativeDocumentMoniker": "TodoListConsoleUI.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TodoListConsoleUI.cs",
+              "RelativeToolTip": "TodoListConsoleUI.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAIwGYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T09:58:02.55Z",
-              "IsPinned": true
+              "WhenOpened": "2024-03-25T18:02:09.487Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileTransactionRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTransactionRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\FileTransactionRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTransactionRepository.cs",
+              "RelativeToolTip": "Classes\\FileTransactionRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwA8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T14:24:12.299Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -107,15 +100,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConsoleTodoPrinter.cs",
-              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleTodoPrinter.cs",
-              "RelativeDocumentMoniker": "Classes\\ConsoleTodoPrinter.cs",
-              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleTodoPrinter.cs",
-              "RelativeToolTip": "Classes\\ConsoleTodoPrinter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
+              "DocumentIndex": 1,
+              "Title": "ConsoleTransactionPrinter.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleTransactionPrinter.cs",
+              "RelativeDocumentMoniker": "Classes\\ConsoleTransactionPrinter.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleTransactionPrinter.cs",
+              "RelativeToolTip": "Classes\\ConsoleTransactionPrinter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T10:07:23.036Z"
+              "WhenOpened": "2024-03-26T13:37:46.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITransactionRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Interfaces\\ITransactionRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ITransactionRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Interfaces\\ITransactionRepository.cs",
+              "RelativeToolTip": "Interfaces\\ITransactionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T12:26:56.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FileTodoRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\FileTodoRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileTodoRepository.cs",
+              "RelativeToolTip": "Classes\\FileTodoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T08:32:04.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FileBudgetRepository.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileBudgetRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\FileBudgetRepository.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\FileBudgetRepository.cs",
+              "RelativeToolTip": "Classes\\FileBudgetRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC0AAACAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T08:31:02.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\Transaction.cs",
+              "RelativeDocumentMoniker": "Classes\\Transaction.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\Transaction.cs",
+              "RelativeToolTip": "Classes\\Transaction.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T15:08:18.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "transactions.json",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\bin\\Debug\\net6.0\\transactions.json",
+              "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\transactions.json",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\bin\\Debug\\net6.0\\transactions.json",
+              "RelativeToolTip": "bin\\Debug\\net6.0\\transactions.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-26T13:41:15.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConsoleBudgetPrinter.cs",
+              "DocumentMoniker": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleBudgetPrinter.cs",
+              "RelativeDocumentMoniker": "Classes\\ConsoleBudgetPrinter.cs",
+              "ToolTip": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\Classes\\ConsoleBudgetPrinter.cs",
+              "RelativeToolTip": "Classes\\ConsoleBudgetPrinter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T19:37:41.19Z",
+              "EditorCaption": ""
             }
           ]
         }
