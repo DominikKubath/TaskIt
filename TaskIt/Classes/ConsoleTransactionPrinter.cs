@@ -44,5 +44,17 @@ namespace TaskIt.Classes
         {
             Console.WriteLine(new string('-', (ColumnWidth + 3) * 6 - 1));
         }
+
+        public void PrintFilterInstructions()
+        {
+            Console.WriteLine("Nach welchen Kriterien möchtest du die Transaktionen gefiltert ausgeben?");
+            Console.WriteLine("Folgende Optionen sind möglich:");
+            Console.WriteLine("- Alle eingehenden Transaktionen ('-E')");
+            Console.WriteLine("- Alle ausgehenden Transaktionen ('-A')");
+            Console.WriteLine("- Alle Transaktionen eines Budgets ('-B BudgetName')");
+            Console.WriteLine("- Alle Transaktionen der letzten 7 Tage ('-W')");
+            Console.WriteLine("- Alle Transaktionen aus einem Monat ('-M MonatsZahl') -- Monatszahlen: 1 - 12");
+            Console.WriteLine("- Alle Transaktionen aus einem Jahr ('-J JahresZahl') -- Jahreszahlen: Bsp. 2022");
+        }
     }
 }

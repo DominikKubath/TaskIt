@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj": {}
+    "C:\\Coding\\TaskIt\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj": {
+    "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\TaskIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj",
+        "projectUniqueName": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\TaskIt.csproj",
         "projectName": "TaskIt",
-        "projectPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj",
-        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\obj\\",
+        "projectPath": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\TaskIt.csproj",
+        "packagesPath": "C:\\Users\\z004c2mp\\.nuget\\packages\\",
+        "outputPath": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\z004c2mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -70,24 +66,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj": {
+    "C:\\Coding\\TaskIt\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj",
+        "projectUniqueName": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
         "projectName": "TaskIt_Test",
-        "projectPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\TaskIt_Test.csproj",
-        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt_Test\\obj\\",
+        "projectPath": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt_Test\\TaskIt_Test.csproj",
+        "packagesPath": "C:\\Users\\z004c2mp\\.nuget\\packages\\",
+        "outputPath": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\z004c2mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,14 +92,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj": {
-                "projectPath": "D:\\Visual Studio Projects\\ASE Project\\TaskIt\\TaskIt.csproj"
+              "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\TaskIt.csproj": {
+                "projectPath": "C:\\Coding\\TaskIt\\TaskIt\\TaskIt\\TaskIt.csproj"
               }
             }
           }
@@ -112,11 +109,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -160,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

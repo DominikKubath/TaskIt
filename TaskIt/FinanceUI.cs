@@ -62,7 +62,7 @@ namespace TaskIt
                         break;
                     case "-O":
                         Console.WriteLine("Übersicht von Transaktionen...");
-                        GetTransactionOverview();
+                        GetTransactionOverview(_transactionRepository.GetAll());
                         break;
                     case "-F":
                         Console.WriteLine("Transaktionen Filtern...");
@@ -170,16 +170,55 @@ namespace TaskIt
             }
         }
 
-        public void GetTransactionOverview()
+        public void GetTransactionOverview(IEnumerable<Transaction> transactions)
         {
             _transactionPrinter.PrintHeader();
-            _transactionPrinter.PrintItems(_transactionRepository.GetAll());
+            _transactionPrinter.PrintItems(transactions);
             _transactionPrinter.PrintFooter();
         }
 
         public void FilterTransactions()
         {
+            _transactionPrinter.PrintFilterInstructions();
+            Console.Write("\n\n Gebe ein Kommando ein: ");
+            string command = Console.ReadLine();
+            Console.Clear();
 
+            var splitCommand = command.Split(new[] { ' ' }, 2);
+            var action = splitCommand[0];
+            var name = splitCommand.Length > 1 ? splitCommand[1] : string.Empty;
+            try
+            {
+                switch(action.ToUpper())
+                {
+                    case "-E":
+                        GetTransactionOverview(_transactionRepository.GetAllIncoming());
+                        break;
+                    case "-A":
+                        GetTransactionOverview(_transactionRepository.GetAllOutgoing());
+                        break;
+                    case "-B":
+                        GetTransactionOverview(_transactionRepository.GetAllOfCategory(name.ToString()));
+                        break;
+                    case "-W":
+                        GetTransactionOverview(_transactionRepository.GetAllOfLastSevenDays());
+                        break;
+                    case "-M":
+                        GetTransactionOverview(_transactionRepository.GetAllOfMonth(int.Parse(name.ToString())));
+                        break;
+                    case "-J":
+                        GetTransactionOverview(_transactionRepository.GetAllOfYear(int.Parse(name.ToString())));
+                        break;
+                    default:
+                        Console.WriteLine("Kommando nicht bekannt...");
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.WriteLine("Kommando nicht bekannt. Abbruch...");
+            }
         }
 
         public void ManageBudgets()

@@ -33,7 +33,7 @@ namespace TaskIt.Classes
 
             if(transactions.Count == 0)
             {
-                return _transactions.Where(t => t.Category.Name.Contains(category));
+                return _transactions.Where(t => t.Category != null && t.Category.Name.Contains(category));
             }
             else
             {
@@ -46,7 +46,7 @@ namespace TaskIt.Classes
             var result = new List<Transaction>();
             foreach(Transaction item in _transactions)
             {
-                var timespan = item.Date.Date - DateTime.Now;
+                var timespan = DateTime.Now - item.Date.Date;
 
                 if(timespan.Days <= 7)
                     result.Add(item);
