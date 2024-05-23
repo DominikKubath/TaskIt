@@ -6,10 +6,10 @@ namespace TaskIt.Interfaces
     {
 
         IEnumerable<Budget> GetAll();
-        IEnumerable<Budget> GetMaxedOutBudgets();
-        IEnumerable<Budget> GetNotMaxedBudgets();
+        IEnumerable<Budget> GetMaxedOutBudgets(IEnumerable<Transaction> transactions);
+        IEnumerable<Budget> GetNotMaxedBudgets(IEnumerable<Transaction> transactions);
         Budget SearchForSimiliarName(string searchedName);
-        double GetBudgetAmountLeft(IEnumerable<Transaction> transactions);
+        double GetBudgetAmountLeft(IEnumerable<Transaction> transactions, Budget budget);
         bool BudgetExists(string budgetName);
         void AddBudget(Budget budget);
         void UpdateBudget(Budget budget);

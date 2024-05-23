@@ -70,7 +70,8 @@ namespace TaskIt
                         break;
                     case "-B":
                         Console.WriteLine("Budget Anlegen/Bearbeiten...");
-                        ManageBudgets();
+                        var budgetUI = new BudgetUI(_budgetRepository, _budgetPrinter, _transactionRepository);
+                        budgetUI.StartBudgetUI();
                         break;
                     case "-Q":
                         Console.WriteLine("Schließe Finanzbuch...");
@@ -219,11 +220,6 @@ namespace TaskIt
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine("Kommando nicht bekannt. Abbruch...");
             }
-        }
-
-        public void ManageBudgets()
-        {
-
         }
 
         private TransactionKind GetTypeFromString(string type)

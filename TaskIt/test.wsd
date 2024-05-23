@@ -1,0 +1,71 @@
+@startuml
+
+class Transaction {
+    + ID: int
+    + Name: string
+    + Amount: double
+    + Kind: TransactionKind
+    + Date: DateTime
+    + Category: Budget
+}
+
+class TodoItem {
+    + ID: int
+    + Name: string
+    + Description: string
+    + IsCompleted: bool
+    + Prio: Priority
+    + Deadline: DateTime?
+}
+
+class JournalPage {
+    + Name: string
+    + Content: string?
+    + LastChanged: DateTime
+}
+
+class Journal {
+    + Name: string
+    + Path: string
+    + LastChanged: DateTime
+}
+
+class Budget {
+    + Name: string
+    + Limit: double?
+}
+
+enum TransactionKind {
+    Outgoing
+    Incoming
+}
+
+enum Priority {
+    Highest = 1
+    High = 2
+    Medium = 3
+    Low = 4
+    None = 5
+}
+
+ITransactionRepository <|.. FileTransactionRepository
+ITodoRepository <|.. FileTodoRepository
+IJournalRepository <|.. FileJournalRepository
+ITodoRepository <|.. FileJournalPageRepository
+IBudgetRepository <|.. FileBudgetRepository
+
+ITransactionPrinter <|.. ConsoleTransactionPrinter
+ITodoPrinter <|.. ConsoleTodoPrinter
+IJournalPrinter <|.. ConsoleJournalPrinter
+IJournalPagePrinter <|.. ConsoleJournalPagePrinter
+IBudgetPrinter <|.. ConsoleBudgetPrinter
+
+Transaction --> Budget
+Transaction "1" --> "*" TodoItem
+JournalPage --> TodoItem
+JournalPage <-- Journal
+Transaction "1" --> "*" JournalPage
+Transaction --> Journal
+Transaction "1" --> "*" Transaction
+
+@enduml

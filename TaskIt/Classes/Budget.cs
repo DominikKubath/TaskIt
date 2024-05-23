@@ -4,6 +4,10 @@
     {
         public string Name { get; set; }
         public double? Limit { get; set; }
+        public Budget() 
+        { 
+        }
+
         public Budget(string name) 
         {
             Name = name;
