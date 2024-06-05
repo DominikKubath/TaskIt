@@ -79,24 +79,12 @@ namespace TaskIt
 
         public void AddTodoItem()
         {
-            Console.Write("Name der Aufgabe: ");
-            string name = Console.ReadLine();
+            var name = GetName();
 
-            Console.Write("Beschreibung der Aufgabe: ");
-            string description = Console.ReadLine();
+            var description = GetDescription();
 
-            Console.Write("Priorität der Aufgabe | 1 (Höchste), 2 (Hohe), 3 (Mittlere), 4 (Niedrige), 5 (Keine) | : ");
-            string priority = Console.ReadLine();
-            int prio;
-            try
-            {
-                prio = int.Parse(priority);
-            }
-            catch 
-            {
-                Console.WriteLine("Ungültige Eingabe: Priorität wurde Standartmäßig auf 5 (Keine Priorität) gesetzt");
-                prio = 5;
-            }
+            var prio = GetPriority();
+
 
             var newTodo = new TodoItem(name, description, prio);
             newTodo.IsCompleted = false;
@@ -104,19 +92,7 @@ namespace TaskIt
             string hasDeadline = Console.ReadLine();
             if (hasDeadline.Trim().ToUpper() == "J")
             {
-                Console.WriteLine("Gebe eine Deadline im folgenden Format an: dd.MM.yyyy (z.B., 01.06.2024)");
-                Console.Write("Deadline ist am: ");
-                string deadlineInput = Console.ReadLine();
-
-                DateTime deadline;
-                if (DateTime.TryParseExact(deadlineInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out deadline))
-                {
-                    newTodo.Deadline = deadline;
-                }
-                else
-                {
-                    Console.WriteLine("Ungültiges Datumformat für die Deadline. Die Deadline wurde nicht gesetzt.");
-                }
+                newTodo.Deadline = GetDeadline();
             }
 
             _repository.Add(newTodo);
@@ -136,51 +112,35 @@ namespace TaskIt
                     string isNewName = Console.ReadLine();
                     if(isNewName.Trim().ToUpper() == "J")
                     {
-                        Console.Write("Neuer Name: ");
-                        existingTodo.Name = Console.ReadLine();
+                        existingTodo.Name = GetName();
                     }
 
                     Console.Write("Neue Beschreibung? (J/N): ");
                     string isNewDescription = Console.ReadLine();
                     if (isNewDescription.Trim().ToUpper() == "J")
                     {
-                        Console.Write("Neue Beschreibung: ");
-                        existingTodo.Description = Console.ReadLine();
+                        existingTodo.Description = GetDescription();
                     }
 
                     Console.Write("Neue Priorität? (J/N): ");
                     string isNewPrio = Console.ReadLine();
                     if (isNewPrio.Trim().ToUpper() == "J")
                     {
-                        Console.WriteLine("Mögliche Prioritäten: \n Höchste => 1\n Hoch => 2\n Mittel => 3\n Niedrig => 4\n Keine => 5\n");
-                        Console.Write("Neue Priorität: ");
-                        existingTodo.Prio = (TodoItem.Priority)int.Parse(Console.ReadLine());
+                        existingTodo.Prio = (TodoItem.Priority)GetPriority();
                     }
 
                     Console.Write("Neue Deadline? (J/N): ");
                     string hasDeadline = Console.ReadLine();
                     if (hasDeadline.Trim().ToUpper() == "J")
                     {
-                        Console.WriteLine("Gebe eine Deadline im folgenden Format an: dd.MM.yyyy (z.B., 01.06.2024)");
-                        Console.Write("Deadline ist am: ");
-                        string deadlineInput = Console.ReadLine();
 
-                        DateTime deadline;
-                        if (DateTime.TryParseExact(deadlineInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out deadline))
-                        {
-                            existingTodo.Deadline = deadline;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ungültiges Datumformat für die Deadline. Die Deadline wurde nicht gesetzt.");
-                        }
+                        existingTodo.Deadline = GetDeadline();
                     }
 
                     Console.Write("Ist die Aufgabe abgeschlossen? (J/N): ");
                     string isCompletedInput = Console.ReadLine();
                     existingTodo.IsCompleted = isCompletedInput.Trim().ToUpper() == "J";
 
-                    // Aktualisieren Sie die Aufgabe im Repository.
                     _repository.Update(existingTodo);
 
                     Console.WriteLine("Aufgabe aktualisiert!");
@@ -208,6 +168,56 @@ namespace TaskIt
             {
                 Console.WriteLine("Ungültige ID.");
             }
+        }
+
+
+        public string GetName()
+        {
+            Console.Write("Name der Aufgabe: ");
+            string name = Console.ReadLine();
+            return name;
+        }
+
+        public string GetDescription()
+        {
+            Console.Write("Beschreibung der Aufgabe: ");
+            string description = Console.ReadLine();
+            return description;
+        }
+
+        public DateTime? GetDeadline()
+        {
+            Console.WriteLine("Gebe eine Deadline im folgenden Format an: dd.MM.yyyy (z.B., 01.06.2024)");
+            Console.Write("Deadline ist am: ");
+            string deadlineInput = Console.ReadLine();
+
+            DateTime deadline;
+            if (DateTime.TryParseExact(deadlineInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out deadline))
+            {
+                return deadline;
+            }
+            else
+            {
+                Console.WriteLine("Ungültiges Datumformat für die Deadline. Die Deadline wurde nicht gesetzt.");
+                return null;
+            }
+        }
+
+        public int GetPriority()
+        {
+            Console.Write("Priorität der Aufgabe | 1 (Höchste), 2 (Hohe), 3 (Mittlere), 4 (Niedrige), 5 (Keine) | : ");
+            string priority = Console.ReadLine();
+            int prio;
+            try
+            {
+                prio = int.Parse(priority);
+            }
+            catch
+            {
+                Console.WriteLine("Ungültige Eingabe: Priorität wurde Standartmäßig auf 5 (Keine Priorität) gesetzt");
+                prio = 5;
+            }
+            return prio;
         }
 
     }

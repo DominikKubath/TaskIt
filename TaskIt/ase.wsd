@@ -1,0 +1,14 @@
+@startuml
+interface Bewegbar {
+    + bewege()
+}
+
+class Auto {
+    - marke
+    - modell
+    + bewege()
+    + tanken()
+}
+
+Auto --|> Bewegbar
+@enduml
