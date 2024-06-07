@@ -31,27 +31,20 @@ namespace TaskIt.Classes
         //Passed transactions in Parameters are previously filtered for their month
         public double GetBudgetAmountLeft(IEnumerable<Transaction> transactions, Budget budget)
         {
-            if (budget.Limit != null)
+            if (budget.Limit == null)
             {
-                var amountLeft = budget.Limit;
-
-                var categoriesTransactions = transactions.Where(t => t.Category.Name == budget.Name && t.Kind == TransactionKind.Outgoing);
-                foreach(Transaction ta in categoriesTransactions)
-                {
-                    amountLeft -= ta.Amount;
-                }
-                categoriesTransactions = transactions.Where(t => t.Category.Name == budget.Name && t.Kind == TransactionKind.Incoming);
-                foreach (Transaction ta in categoriesTransactions)
-                {
-                    amountLeft += ta.Amount;
-                }
-
-                return (double)amountLeft;
-            }
-            else
                 return 0;
+            }
 
+            var categoriesTransactions = transactions.Where(t => t.Category.Name == budget.Name);
+
+            var outgoingSum = categoriesTransactions.Where(t => t.Kind == TransactionKind.Outgoing).Sum(t => t.Amount);
+
+            var incomingSum = categoriesTransactions.Where(t => t.Kind == TransactionKind.Incoming).Sum(t => t.Amount);
+
+            return (double)(budget.Limit - outgoingSum + incomingSum);
         }
+
 
         private bool BudgetAlreadyExists(string budgetName) => _budgets.Where(b => b.Name == budgetName).Any();
 
